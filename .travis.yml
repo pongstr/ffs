@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+
+node_js:
+  - "6"
+  - "8"
+
+before_install:
+  - cd functions
+  - npm install -g mocha
+
+script:
+  - npm test
+
+notifications:
+  webhooks:
+    on_success: change
+    on_failure: always
