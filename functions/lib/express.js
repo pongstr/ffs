@@ -1,6 +1,7 @@
 const express    = require('express');
 const bodyParser = require('body-parser');
 const markdown = require('./markd');
+const nodesass = require('./sass');
 
 const app = express();
 
@@ -14,5 +15,5 @@ app.use((req, res, next) => {
 });
 
 app.use('/m', markdown());
-
+app.use('/s', nodesass())
 module.exports = app;
