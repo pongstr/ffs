@@ -1,9 +1,6 @@
 {
   "hosting": {
     "public": "static",
-    "rewrites": [
-      { "source": "/tools/**", "function": "tools" }
-    ],
     "ignore": [
       "firebase.json",
       "**/.*",
