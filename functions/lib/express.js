@@ -14,6 +14,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => res.format({
+  'application/json': () => res.send('Dashboard tools up and running.')
+}));
 app.use('/m', markdown());
-app.use('/s', nodesass())
+app.use('/s', nodesass());
 module.exports = app;
